@@ -1,0 +1,351 @@
+setwd("F:/Yurong Jiang/School/Master/[ 9 ]USC MSBA/18fall/DSO545 R & Python/final exam/sample question")
+setwd("F:/Yurong Jiang/School/Master/[ 9 ]USC MSBA/18fall/DSO545 R & Python/final exam/sample question")
+library(dplyr)
+icecrean=read.csv("icecream.csv")
+View(icecrean)
+icecrean %>%
+summarise(average(USDinMillions))
+icecrean %>%
+summarise(mean(USDinMillions))
+icecrean %>%
+group_by(Country.or.Area) %>%
+summarise(mean(USDinMillions))
+world_map <- map_data("world")
+library(dplyr)
+library(ggplot2)
+world_map <- map_data("world")
+View(world_map)
+icecream=read.csv("icecream.csv")
+icecream %>%
+group_by(Country.or.Area) %>%
+summarise(mean(USDinMillions))
+colnames(icecream)[1]="region"
+left_join(world_map, icecream, "region")
+icecream$region=as.character(icecream$region)
+left_join(world_map, icecream, "region")
+icecream %>%
+group_by(Country.or.Area) %>%
+summarise(Mean=mean(USDinMillions))
+icecream=read.csv("icecream.csv")
+icecream %>%
+group_by(Country.or.Area) %>%
+summarise(Mean=mean(USDinMillions))
+icecream=icecream %>%
+group_by(Country.or.Area) %>%
+summarise(Mean=mean(USDinMillions))
+View(icecream)
+world_map <- map_data("world")
+colnames(icecream)[1]="region"
+icecream$region=as.character(icecream$region)
+left_join(world_map, icecream, "region")
+ggplot(world_map, aes(x = long, y = lat, group = group)) +
+geom_polygon(fill = Mean, color = "black")
+left_join(world_map, icecream, "region")
+ggplot(world_map, aes(x = long, y = lat, group = group)) +
+geom_polygon(fill = Mean, color = "black")
+icecream_map=left_join(world_map, icecream, "region")
+ggplot(icecream_map, aes(x = long, y = lat, group = group)) +
+geom_polygon(fill = Mean, color = "black")
+View(icecream_map)
+icecream_map=left_join(world_map, icecream, "region")
+ggplot(icecream_map, aes(x = long, y = lat, group = group)) +
+geom_polygon(fill = Mean, color = "black")
+ggplot(icecream_map, aes(x = long, y = lat, group = group,fill=Mean)) +
+geom_polygon( color = "black")
+ggplot(icecream_map, aes(x = long, y = lat, group = group)) +
+geom_polygon( fill=Mean,color = "black")
+ggplot(icecream_map, aes(x = long, y = lat, group = group)) +
+geom_polygon(aes(fill=Mean) ,color = "black")
+ggplot(icecream_map, aes(x = long, y = lat, group = group)) +
+geom_polygon(aes(fill=Mean) ,color = "black",fill="red")
+ggplot(icecream_map, aes(x = long, y = lat, group = group)) +
+geom_polygon(aes(fill=Mean) ,color = "black")
+ggplot(icecream_map, aes(x = long, y = lat, group = group)) +
+geom_polygon(aes(fill=Mean) ,color = "black")
+(No data available for white area)")+
+library(rvest)
+players <- url %>%
+read_html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/table[1]') %>%
+html_table()
+library(rvest)
+players <- url %>%
+read_html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/table[1]') %>%
+html_table()
+players <- url %>%
+html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/table[1]') %>%
+html_table()
+players <- url %>%
+html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/table[1]') %>%
+html_table()
+players <- url %>%
+read_html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[1]') %>%
+html_table()
+players <- url %>%
+read_html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[1]') %>%
+html_table()
+players <- url %>%
+html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[1]') %>%
+html_table()
+library(rvest)
+url <- "https://en.wikipedia.org/wiki/Designated_Player_Rule"
+players <- url %>%
+read_html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[1]') %>%
+html_table()
+View(players)
+players <- players[[1]]
+View(players)
+View(players)
+players$`2018 Guaranteed compensation[14]`=players$compensation
+View(players)
+url <- "https://en.wikipedia.org/wiki/Designated_Player_Rule"
+players <- url %>%
+read_html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[1]') %>%
+html_table()
+players$compensation=players$`2018 Guaranteed compensation[14]`
+players$compensation=players$`2018 Guaranteed compensation[14]`
+players$`2018 Guaranteed compensation[14]`=players$compensation
+players$`2018 Guaranteed compensation[14]`=players$compensation
+View(players)
+players <- players[[1]]
+View(players)
+players$compensation=players$`2018 Guaranteed compensation[14]`
+View(players)
+players$`2018 Guaranteed compensation[14]`=players$compensation
+View(players)
+players <- url %>%
+read_html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[1]') %>%
+html_table()
+players <- players[[1]]
+players$`2018 Guaranteed compensation[14]`=players$compensation
+View(players)
+colnames(players)[5]="Compensation"
+players <- url %>%
+read_html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[1]') %>%
+html_table()
+players <- players[[1]]
+colnames(players)[5]="Compensation"
+players$Compensation=as.numeric(players$Compensation)
+View(players)
+View(players)
+players <- url %>%
+read_html() %>%
+html_nodes(xpath = '//*[@id="mw-content-text"]/div/table[1]') %>%
+html_table()
+players <- players[[1]]
+colnames(players)[5]="Compensation"
+players$Compensation = str_replace_all(players$compensation, pattern = '[,$]',replacement="")
+library(string)
+library(stringr)
+players$Compensation = str_replace_all(players$compensation, pattern = '[,$]',replacement="")
+View(players)
+players$Compensation = str_replace_all(players$compensation, pattern = '[,\\$]',replacement="")
+players$Compensation = str_replace_all(players$compensation, pattern = '[, \\$]',replacement="")
+players$Compensation <- str_replace_all(players$Compensation,
+pattern = '[, \\$]',
+replacement = "")
+players$Compensation=as.numeric(players$Compensation)
+players$Compensation = str_replace_all(players$compensation,
+pattern = '[, \\$]',
+replacement="")
+players$Compensation <- str_replace_all(players$Compensation,
+pattern = '[, \\$]',
+replacement = "")
+players$Compensation=as.numeric(players$Compensation)
+View(players)
+NYLAplayers= players %>%
+filter(`Current club` %in% c("New York City FC","LA Galaxy")) %>%
+order_by(Compensation,desc)
+NYLAplayers= players %>%
+filter(`Current club` %in% c("New York City FC","LA Galaxy")) %>%
+order_by(Compensation,decs)
+NYLAplayers= players %>%
+filter(`Current club` %in% c("New York City FC","LA Galaxy")) %>%
+order_by(Compensation,desc)
+NYLAplayers= players %>%
+filter(`Current club` %in% c("New York City FC","LA Galaxy")) %>%
+arrange(desc(Compensation))
+View(NYLAplayers)
+View(NYLAplayers)
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=Player))+
+geom_point()
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_discrete(name="",break=1:6)
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_discrete(break=1:6,labels=paste(1:7))
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_discrete(break=1000000:6000000,labels=paste(1:6))
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_continuous(break=1000000:6000000,labels=paste(1:6))
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_continuous(break=1000000:6000000,labels=c("1","2","3","4","5","6"))
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_continuous(break=seq(0,6000000,1000000),labels=c("1","2","3","4","5","6"))
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_continuous(breaks = =seq(0,6000000,1000000),labels=c("1","2","3","4","5","6"))
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_continuous(breaks=seq(0,6000000,1000000),labels=c("1","2","3","4","5","6"))
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_continuous(breaks=seq(0,6000000,1000000),labels=c("0","1","2","3","4","5","6"))
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_continuous(breaks=1000000:6000000,labels=c("0","1","2","3","4","5","6"))
+NYLAplayers %>%
+ggplot(aes(x=Compensation,y=reorder(Player,Compensation)))+
+geom_point()+
+scale_x_continuous(breaks=seq(0,6000000,1000000),labels=c("0","1","2","3","4","5","6"))
+library(stringr)
+fileName <- "friends.txt"
+text <- readChar(fileName, file.info(fileName)$size)
+str_locate_all(text, "$")
+str_locate_all(text, "$[1-9]{4,5}")
+fifa=read.csv("fifa_players.csv")
+setwd("F:/Yurong Jiang/School/Master/[ 9 ]USC MSBA/18fall/DSO545 R & Python")
+fifa=read.csv("fifa_players.csv")
+setwd("F:/Yurong Jiang/School/Master/[ 9 ]USC MSBA/18fall/DSO545 R & Python/homework/1")
+fifa=read.csv("fifa_players.csv")
+##1
+mean(fifa$Age) ##the mean age of the players is 25.14454
+min(fifa$Age)  ##the min age of the players is 16
+max(fifa$Age)  ##the max age of the players is 47
+##2
+fifa[fifa$Age==16,1]
+##3
+nrow(fifa[fifa$Nationality=="France" & fifa$Club=="Arsenal",])
+##4
+nrow(fifa[fifa$Club=="Manchester United" & fifa$Age>=16 & fifa$Age<=19,])
+##5
+manchester_united= fifa[fifa$Club=="Manchester United",c("Name","Age","Nationality")]
+manchester_city= fifa[fifa$Club=="Manchester City",c("Name","Age","Nationality")]
+##6(1)
+nrow(manchester_united[manchester_united$Nationality=="England" ,])/nrow(manchester_united)
+##6(2)
+nrow(manchester_city[manchester_city$Nationality=="England" ,])/nrow(manchester_city)
+##7
+fifa$Value=as.numeric(as.character(fifa$Value))
+mean(fifa[fifa$Value>=100 & fifa$Value<=150,2], na.rm=T)
+##8
+Value.Range=ifelse(fifa$Value<102,"Below Average","Above Average")
+##9
+table(fifa$Value.Range)
+##9
+table(fifa$Value.Range)
+?table
+##8
+Value.Range=ifelse(fifa$Value<102,"Below Average","Above Average")
+##9
+table(fifa$Value.Range)
+##2
+fifa[fifa$Age==16,1]
+##3
+nrow(fifa[fifa$Nationality=="France" & fifa$Club=="Arsenal",])
+fifa=read.csv("fifa_players.csv")
+fifa=read.csv("fifa_players.csv")
+##9
+table(fifa$Value.Range)
+##10
+fifa$Age.Range=ifelse(fifa$Age<20,"Below 20 years",
+ifelse(fifa$Age<25,"[20-25) years",
+ifelse(fifa$Age<30,"[25-30) years","Above 30 years")))
+setwd("F:/Yurong Jiang/School/Master/[ 9 ]USC MSBA/18fall/DSO545 R & Python/homework/1")
+##8
+fifa$Value.Range=ifelse(fifa$Value<102,"Below Average","Above Average")
+fifa=read.csv("fifa_players.csv")
+setwd("F:/Yurong Jiang/School/Master/[ 9 ]USC MSBA/18fall/DSO545 R & Python/homework/1")
+fifa=read.csv("fifa_players.csv")
+##8
+fifa$Value.Range=ifelse(fifa$Value<102,"Below Average","Above Average")
+fifa=read.csv("fifa_players.csv")
+##1
+mean(fifa$Age) ##the mean age of the players is 25.14454
+min(fifa$Age)  ##the min age of the players is 16
+max(fifa$Age)  ##the max age of the players is 47
+##2
+fifa[fifa$Age==16,1]
+##3
+nrow(fifa[fifa$Nationality=="France" & fifa$Club=="Arsenal",])
+##4
+nrow(fifa[fifa$Club=="Manchester United" & fifa$Age>=16 & fifa$Age<=19,])
+##5
+manchester_united= fifa[fifa$Club=="Manchester United",c("Name","Age","Nationality")]
+manchester_city= fifa[fifa$Club=="Manchester City",c("Name","Age","Nationality")]
+##6(1)
+nrow(manchester_united[manchester_united$Nationality=="England" ,])/nrow(manchester_united)
+##6(2)
+nrow(manchester_city[manchester_city$Nationality=="England" ,])/nrow(manchester_city)
+##7
+fifa$Value=as.numeric(as.character(fifa$Value))
+mean(fifa[fifa$Value>=100 & fifa$Value<=150,2], na.rm=T)
+##8
+fifa$Value.Range=ifelse(fifa$Value<102,"Below Average","Above Average")
+##9
+table(fifa$Value.Range)
+##start
+setwd("F:/Yurong Jiang/School/Master/[ 9 ]USC MSBA/18fall/DSO545 R & Python/homework/2")
+HeavenlyChocolates = read.csv('HeavenlyChocolates.csv')
+#6
+HeavenlyChocolates$Weekday=ifelse(HeavenlyChocolates$Day=='Sat'|HeavenlyChocolates$Day=='Sun', 'Weekend', 'Weekday')
+ggplot(HeavenlyChocolates, aes(x=weekday, y = Amount_Spent)) +
+geom_bar(stat = 'summary', fun.y = 'mean') +
+xlab('') +
+ylab('Average Amount Spent') +
+ggtitle('Average Amount Spent by Visitors: Weekday vs. Weekend')
+View(HeavenlyChocolates)
+ggplot(HeavenlyChocolates, aes(x=Weekday, y = Amount_Spent)) +
+geom_bar(stat = 'summary', fun.y = 'mean') +
+xlab('') +
+ylab('Average Amount Spent') +
+ggtitle('Average Amount Spent by Visitors: Weekday vs. Weekend')
+knitr::opts_chunk$set(echo = TRUE)
+#1
+setwd("F:/Yurong Jiang/School/Master/[ 9 ]USC MSBA/18fall/DSO545 R & Python/homework/3")
+library(dplyr)
+library(magrittr)
+library(ggplot2)
+congress = read.csv("congress.csv")
+congress %>%
+filter(congress == 113) %>%
+summarise(mean_age = mean(age))
+#4.
+congress %>%
+filter(congress == 112 & chamber == 'senate') %>%
+group_by(party) %>%
+summarise(max_age = max(age),
+min_age = min(age),
+avg_age = mean(age))
+cat(“a\\.b”)
+print(“a\\.b”)
+print(“a.b”)
